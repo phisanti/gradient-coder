@@ -10,6 +10,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.anaconda.com/miniconda/Miniconda3-la
 ENV PATH=$PATH:/home/coder/miniconda3/bin/
 
 # Add extensions
+RUN mkdir -p ~/.local/share/code-server/ && mkdir -p ~/.local/share/code-server/User && echo "{\"extensions.autoCheckUpdates\": false, \"extensions.autoUpdate\": false}" > ~/.local/share/code-server/User/settings.json 
 RUN curl -JLO https://github.com/microsoft/vscode-jupyter/archive/2012.11.3.tar.gz  && \
     code-server --install-extension ms-toolsai.jupyter-2020.11.399280825.vsix || true
 
