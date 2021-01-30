@@ -1,4 +1,4 @@
-FROM codercom/code-server
+FROM codercom/code-server:3.7.4
 
 # Install conda
 RUN curl -o ~/miniconda.sh -O  https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh  && \
