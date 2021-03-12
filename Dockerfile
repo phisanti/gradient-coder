@@ -11,5 +11,5 @@ ENV PATH=$PATH:/home/coder/miniconda3/bin/
 
 # Entrypoint
 COPY run.sh /run.sh
-EXPOSE 8888
+EXPOSE 8889
 ENTRYPOINT ["/run.sh"]
